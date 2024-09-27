@@ -1,0 +1,209 @@
+<style>
+ 
+
+    .search-container {
+        position: relative;
+        width: 300px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+    }
+    
+    
+    
+    .suggestions-list {
+        position: absolute;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none; /* Initially hidden */
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .suggestions-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+    }
+    
+    .suggestions-list li:hover {
+        background-color: #f4f4f4;
+    }
+    
+    .suggestions-list li:last-child {
+        border-bottom: none;
+    }
+    .suggestions-list li a{
+       text-transform: capitalize;
+       color:black;
+}
+    /* Highlight active suggestion */
+    .suggestions-list li.highlight {
+        background-color: #d4d4d4;
+    }
+    .svg-here{
+       position:absolute;
+       top:20%;
+       right:5%;
+       fill:gray;
+       }
+    ::-webkit-scrollbar {
+      width: 10px;
+       
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+       border-radius:20px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+   
+        </style>
+    
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search..." oninput="filterSuggestions()" autocomplete="off">
+           <svg class="svg-here" xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            <ul id="suggestions" class="suggestions-list">
+               
+<li><a href="https://www.saundershoa.com/?anchorElement=element_362">hoa consulting services</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_362">  hoa financial  services</a></li> 
+<li><a href="https://www.saundershoa.com/?anchorElement=element_352">  homeowners association management company </a></li> 
+<li><a href="https://www.saundershoa.com/?anchorElement=element_352">  homeowners associat</a></li> 
+<li><a href="https://www.saundershoa.com/?anchorElement=element_780">  online hoa management</a></li> 
+<li><a href="https://www.saundershoa.com/?anchorElement=element_781">  north carolina hoa association                        </a></li> 
+<li><a href="https://www.saundershoa.com/about-us?anchorElement=element_781">  north carolina homeowners association</a></li> 
+<li><a href="https://www.saundershoa.com/about-us?anchorElement=element_781">hoa management companies</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">local hoa management companies</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">hoa management companies nc</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">homeowners association management companies</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">largest hoa management companies</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">hoa association management companies</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1553">hoa property management near me</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1557">winston salem property management</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1557">property management winston salem</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1557">property management companies winston salem</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_1557">best property management company near me</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_311">homeowner property management</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_311">property management consulting</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_311">hoa management company</a></li>
+<li><a href="https://www.saundershoa.com/?anchorElement=element_311">property management for hoa</a></li>
+<li><a href="https://www.saundershoa.com/sherwood-association">sherwood management company</a></li>
+<li><a href="https://www.saundershoa.com/cobblestone-homeowners-association/">cobblestone community association</a></li>
+<li><a href="https://www.saundershoa.com/cobblestone-homeowners-association/">cobblestone lake homeowners association</a></li>
+<li><a href="https://www.saundershoa.com/about-us?anchorElement=element_781">community association management services
+</a></li>
+<li><a href="https://www.saundershoa.com/about-us?anchorElement=element_781">community association management company</a></li>
+ 
+               
+            </ul>
+        </div>
+    
+        <script>
+     const suggestions = document.getElementById('suggestions');
+    const searchInput = document.getElementById('search');
+    let activeIndex = -1; 
+    
+    function filterSuggestions() {
+        const input = searchInput.value.toLowerCase();
+        const listItems = suggestions.getElementsByTagName('li');
+        let matches = 0;
+        activeIndex = -1; 
+    
+        for (let i = 0; i < listItems.length; i++) {
+            const item = listItems[i].textContent.toLowerCase();
+            if (item.indexOf(input) > -1) {
+                listItems[i].style.display = '';
+                matches++;
+            } else {
+                listItems[i].style.display = 'none';
+            }
+        }
+    
+        suggestions.style.display = matches > 0 ? 'block' : 'none';
+    
+        if (matches > 0) {
+            highlightFirstSuggestion(); 
+        }
+    }
+    
+    
+    function highlightFirstSuggestion() {
+        const listItems = suggestions.getElementsByTagName('li');
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].classList.remove('highlight'); 
+        }
+        if (listItems[0]) {
+            listItems[0].classList.add('highlight'); 
+            activeIndex = 0;
+        }
+    }
+    
+    
+    searchInput.addEventListener('keydown', function (e) {
+        const listItems = suggestions.getElementsByTagName('li');
+        
+        if (e.key === 'ArrowDown') {
+           
+            activeIndex = (activeIndex + 1) % listItems.length;
+            updateActiveItem();
+        } else if (e.key === 'ArrowUp') {
+           
+            activeIndex = (activeIndex - 1 + listItems.length) % listItems.length;
+            updateActiveItem();
+        } else if (e.key === 'Enter') {
+         
+            e.preventDefault(); 
+            if (activeIndex !== -1) {
+                const link = listItems[activeIndex].querySelector('a').href;
+                window.location.href = link;
+                searchInput.value = listItems[activeIndex].textContent;
+                suggestions.style.display = 'none'; 
+            }
+        }
+    });
+    
+    
+    function updateActiveItem() {
+        const listItems = suggestions.getElementsByTagName('li');
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].classList.remove('highlight'); 
+        }
+        if (listItems[activeIndex]) {
+            listItems[activeIndex].classList.add('highlight'); 
+        }
+    }
+    
+    
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.search-container')) {
+            suggestions.style.display = 'none';
+        }
+    });
+    
+    searchInput.addEventListener('click', function () {
+        filterSuggestions();
+    });
+    
+        </script>
